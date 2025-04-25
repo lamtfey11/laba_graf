@@ -1,3 +1,5 @@
+#Дано бинарное дерево. Найти все поддеревья, структура которых совпадает с заданной.
+
 import random
 from collections import deque
 import networkx as nx
