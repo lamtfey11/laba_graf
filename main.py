@@ -58,8 +58,8 @@ class BinaryTree:
                     nodes_queue.append(None)
                 current_index += 1
 
-        elapsed = (time.time() - start_time) * 1_000_000
-        print(f"Дерево создано за {elapsed:.3f} мкс")
+        elapsed = (time.time() - start_time) * 1_000
+        print(f"Дерево создано за {elapsed:.3f} мс")
         print(f"Количество узлов в дереве: {self._size}")
         self.save_to_file("generated_tree.txt")
 
@@ -297,8 +297,8 @@ def main():
 
             start_time = time.time()
             matches = find_structurally_matching_subtrees_networkx(current_tree, pattern_tree)
-            elapsed_time = (time.time() - start_time) * 1_000_000
-            print(f"Поиск совпадающих поддеревьев выполнен за {elapsed_time:.3f} мкс")
+            elapsed_time = (time.time() - start_time) * 1_000
+            print(f"Поиск совпадающих поддеревьев выполнен за {elapsed_time:.3f} мс")
 
             if not matches:
                 continue
